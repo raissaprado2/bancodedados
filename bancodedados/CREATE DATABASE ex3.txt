@@ -1,0 +1,98 @@
+CREATE DATABASE ex3
+
+CREATE TABLE Produtos (
+    id_produto SERIAL PRIMARY KEY NOT NULL,
+    nome_produto VARCHAR(100),
+    qtde INT NOT NULL ,
+    valor DECIMAL (7,2)
+)
+
+
+SELECT nome_produto FROM Produtos
+
+INSERT INTO produtos 
+VALUES (DEFAULT, 'MOUSE','10','45.00')
+
+-- TABELAS 
+CREATE TABLE CLIENTE (
+    codigo INT NOT NULL,
+    nome VARCHAR(20) NOT NULL,
+    endereco VARCHAR (20) NOT NULL,
+    cep CHAR(2) NOT NULL,
+    uf CHAR(2) NOT NULL,
+    cnpj CHAR(20) NOT NULL,
+    ie CHAR(20) NOT NULL,
+    PRIMARY KEY (codigo)
+);
+
+CREATE TABLE VENDEDOR (
+    codigo INT NOT NULL,
+    nome VARCHAR(20) NOT NULL,
+    salario DECIMAL (7,2) NOT NULL,
+    fsalarial CHAR(1) NOT NULL,
+    PRIMARY KEY (codigo)
+);
+
+CREATE TABLE cadfun (
+   codfun INT NOT NULL PRIMARY KEY,
+   nome VARCHAR(40) NOT NULL,
+   depto CHAR(2),
+   funcao CHAR(20),
+   salario NUMERIC(18,2)
+);
+
+
+-- 7
+INSERT INTO cadfun 
+VALUE (1,)         
+
+
+SELECT CODFUN , NOME , SALARIO + 250 AS PROJ_SALARIO FROM cadfun;
+
+ --8
+SELECT = FROM cadfun WHERE FUNCAO = 'ANALISTA';
+
+ --9
+SELECT * FROM cadfun WHERE SALARIO > 1700;
+
+ --10
+ SELECT * FROM cadfun WHERE SALARIO < 1700;
+
+ --11
+ SELECT = FROM cadfun WHERE SALARIO = 1700;
+
+ --12
+SELECT * FROM cadfun 
+WHERE (FUNCAO = 'ANALISTA') OR (FUNCAO = 'PROGRAMADOR') 
+ORDER BY FUNCAO;
+
+
+
+ --13
+SELECT = FROM cadfun
+WHERE (FUNCAO = 'ANALISTA') OR (FUNCAO = 'PROGRAMADOR') AND (SALARIO > 1200)
+
+
+
+ --14
+ SELECT = FROM cadfun
+ WHERE NOT ((FUNCAO = 'ANALISTA') OR (FUNCAO = 'PROGRAMADOR'))
+ ORDER BY FUNCAO;
+
+ --15
+
+
+
+--16
+SELECT * FROM cadfun
+WHERE (FILHOS BETWEEN 2 AND 4 ) AND (SALARIO < 1600);
+--17
+SELECT + FROM cadfun
+WHERE (FILHOS < 2) OR (FILHOS > 3);
+
+--18
+SELECT * FROM cadfun
+WHERE ((FILHOS < 2) OR (FILHOS > 3)) AND (FILHOS !=0);
+--19
+SELECT * FROM cadfun
+WHERE FILHOS IN (2,3);
