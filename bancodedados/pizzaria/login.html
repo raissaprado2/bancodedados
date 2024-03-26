@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="pizzaria.sql">
+    <title>Login</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logo_pizza-removebg-preview.png" alt="" width="130px" height="70px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse white" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" 
+                href="inicio.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "
+                href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "
+                href="cadastro.html">Cadastro</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">pesquisar</button>
+            </form>
+          </div>
+        </div>
+      </nav><br><br><br>
+
+      <header>
+        <style>
+          body{
+            background-color: black;
+            color: white;
+          }
+        </style>
+          <div class="content">      
+            <div id="login">
+              <form method="post" action=""> 
+                <h1>Login</h1> <br>
+                <p> 
+                  <label for="nome_login">e-mail</label><br>
+                  <input id="nome_login" class="input-redondo"required="required" type="text" placeholder="@gmail.com"/>
+                </p>
+                 
+                <p> 
+                  <label for="email_login">senha</label><br>
+                  <input id="email_login" class="input-redondo" required="required" type="password" placeholder="*****" /> 
+                </p>
+                 
+                <p> 
+                  <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+                  <label for="manterlogado">Manter-me logado</label>
+                </p>
+                 
+                <p> 
+                  <input type="submit" class="input-redondo"value="Logar" /> 
+                </p>
+                 
+                <p class="link"><br>
+                  Ainda não tem conta?
+                  <a href="cadastro.html">Cadastre-se</a>
+                </p>
+              </form><br><br><br><br><br><br><br><br><br><br><br><br><br><br><b><br></b>
+              <hr class="featurette-divider">
+          <div class="container">
+            <div class="rodapé">
+                <p>&copy; 2024 - PIZZA.</p>
+              </div>
+</body>
+
+</html>
