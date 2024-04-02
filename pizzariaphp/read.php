@@ -25,6 +25,10 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM contatos')->fetchColumn();
 <div class="content read">
 	<h2>Visualizar Pedidos</h2>
 	<a href="create.php" class="create-contact">Realizar Pedido</a>
+    <form method="GET" action="">
+		<input type="text" name="pizza" placeholder="Pesquisar por sabor da pizza">
+		<button type="submit">Pesquisar</button>
+	</form>
 	<table>
         <thead>
             <tr>

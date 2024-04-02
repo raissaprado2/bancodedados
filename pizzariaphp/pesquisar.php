@@ -1,24 +1,15 @@
 <?php
-include 'conexao.php'; // Arquivo de conexão com o banco de dados
+include 'functions.php'; // Arquivo de conexão com o banco de dados
 
-if (isset($_GET['cliente'])) {
-    $cliente = $_GET['cliente'];
+if (isset($_GET['pizza'])) {
+    $pizza = $_GET['pizza'];
     
-    $sql = "SELECT * FROM pedidos WHERE cliente LIKE '%$cliente%'";
+    $sql = "SELECT * FROM pedidos WHERE pizza LIKE '%$pizza%'";
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        echo "<table>";
-        echo "<tr><th>ID</th><th>Cliente</th><th>Produto</th><th>Quantidade</th><th>Valor</th><th>Data do Pedido</th></tr>";
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr><td>"  . $row["pizza"]  . "</td></tr>";
-        }
-        echo "</table>";
-    } else {
-        echo "Nenhum resultado encontrado.";
-    }
+    // Restante do código para exibir os resultados...
 } else {
-    echo "Por favor, insira um cliente para pesquisar.";
+    // Código para exibir todos os pedidos caso nenhum sabor de pizza seja especificado.
 }
 
 $conn->close();
