@@ -1,5 +1,5 @@
 <?php
-include 'functions.php'; // Arquivo de conexão com o banco de dados
+include 'conexao.php'; // Arquivo de conexão com o banco de dados
 
 if (isset($_GET['pizza'])) {
     $pizza = $_GET['pizza'];

@@ -34,6 +34,8 @@ echo <<<EOT
     		<h1>Pedidos - Pizzaria Raissa</h1>
             <a href="index.php"><i class="fas fa-home"></i>Inicio</a>
     		<a href="read.php"><i class="fas fa-shopping-basket"></i>Pedidos</a>
+            <a href="pesquisar.php"><i class="fas fa-search"></i>Pesquisar Pedidos</a>
+        </form>
     	</div>
     </nav>
 EOT;
