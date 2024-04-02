@@ -5,7 +5,7 @@ include 'functions.php';
 // Home Page template below.
 ?>
 
-<?=template_header('Pizzaria Dom Bruno')?>
+<?=template_header('Pizzaria Raissa')?>
 
 <div class="content">
 	<h2>Inicio</h2>
