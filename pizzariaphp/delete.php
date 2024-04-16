@@ -22,7 +22,7 @@ if (isset($_GET['id_contato'])) {
             // O usuário clicou no botão "Não", redireciona de volta para a página de leitura
             header('Location: read.php');
             exit;
-        }
+        } 
     }
 } else {
     exit('Nenhum ID especificado!');
