@@ -10,3 +10,4 @@ CREATE TABLE  IF NOT EXISTS contatos (
 
 INSERT INTO contatos (id_contato,nome,email, cel, pizza, cadastro) VALUES
 (1, 'Raissa' , 'raissa@dev.com' , '(19)00000-0000','queijo',7858)
+
