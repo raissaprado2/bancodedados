@@ -10,7 +10,8 @@ include 'functions.php';
 <center>
 <div class="content">
     <h2>Bem-Vindo</h2>
-    <img src="..." class="img-fluid" alt="...">
+    <img src="img/Capa-Site-Out-2022-653x442 (1).jpg" class="img-fluid" alt="...">
+    <button type="button" class="btn btn-primary">Primary</button>
     <br>
     <img src="..." class="img-fluid" alt="...">
     </div>
