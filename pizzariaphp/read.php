@@ -8,7 +8,7 @@ $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] :
 $records_per_page = 5;
 
 // Preparar a instrução SQL e obter registros da tabela contacts, LIMIT irá determinar a página
-$stmt = $pdo->prepare('SELECT * FROM contatos ORDER BY id_contato OFFSET :offset LIMIT :limit');
+
 $stmt->bindValue(':offset', ($page - 1) * $records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':limit', $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
