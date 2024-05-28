@@ -205,3 +205,53 @@ body {
 .read .index:hover {
     background-color: #32a367;
 }
+
+
+/* Estilo básico para o botão primário */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: #32a367;
+    color: white;
+    border: none;
+    align-items: center;
+}
+
+/* Estilo customizado adicional */
+.custom-button {
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+    background-color: #32a367;
+    transform: translateY(-2px);
+}
+
+.custom-button:active {
+    background-color: #32a367;
+    transform: translateY(0);
+}
+
+.custom-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #32a367;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajuste conforme necessário */
+}

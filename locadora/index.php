@@ -1,21 +1,20 @@
 <?php
 include 'functions.php';
-// Seu código PHP aqui.
-
-// Página inicial abaixo.
 ?>
+<?= template_header ('SENAI')?>
 
-<?=template_header('Locadora HotWheels')?>
-<link rel="stylesheet" href="style.css">
-<center>
-<div class="content">
-    <h2>Bem-Vindo</h2>
-    <img src="img/Capa-Site-Out-2022-653x442 (1).jpg" class="img-fluid" alt="...">
-    <button type="button" class="btn btn-primary">Primary</button>
-    <br>
-    <img src="..." class="img-fluid" alt="...">
-    </div>
-    <a href="read.php" class="index">Realizar Pedido</a>
-</div>
-</center>
-<?=template_footer()?>
+<div class="content text-center">
+    <h2  style="color: #F1A204;">Locadora de Veículos</h2>
+    
+    <div class="row mt-5">
+        <!-- Cards superiores -->
+        <div class="col-md-4 mb-4" >
+            <div class="card" style="align-items:center;">
+                <img src="img/Capa-Site-Out-2022-653x442 (1).jpg" class="card-img-top" alt="Imagem do Card 1"  style="width:1000px; height: 500px; ">
+                <div class="card-body">
+        
+<a href="reservas.php" class="btn btn-primary">Realizar Reserva</a> 
+      
+
+<?= template_footer()?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
