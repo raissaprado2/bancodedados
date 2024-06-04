@@ -13,7 +13,7 @@ include 'functions.php';
                 <img src="img/Capa-Site-Out-2022-653x442 (1).jpg" class="card-img-top" alt="Imagem do Card 1"  style="width:1000px; height: 500px; ">
                 <div class="card-body">
         
-<a href="reservas.php" class="btn btn-primary">Realizar Reserva</a> 
+<a href="cadastro_funcionarios.php" class="btn btn-primary">Funcionários</a>  <a href="cadastro_cliente.php" class="btn btn-primary">Clientes</a> 
       
 
 <?= template_footer()?>
