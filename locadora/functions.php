@@ -50,4 +50,11 @@ echo <<<EOT
 </html>
 EOT;
 }
+
+function CadastrarFuncionario(){
+    echo <<<EOT
+    </body>
+    </html>
+    EOT;
+}
 ?>

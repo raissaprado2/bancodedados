@@ -1,6 +1,24 @@
 <?php
 include 'functions.php';
+$pdo=pdo_connect_pgsql();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST["nome"];
+    $sobrenome = $_POST["sobrenome"];
+    $estado = $_POST["estado"];
+    $endereco = $_POST["endereco"];
+    $cidade = $_POST["cidade"];
+    $email = $_POST["email"];
+    $celular = $_POST["celular"];
+
+    if (CadastrarFuncionario($nome, $sobrenome, $estado, $endereco, $cidade, $email, $celular)) {
+        echo "Cliente cadastrado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar o cliente.";
+    }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html>
