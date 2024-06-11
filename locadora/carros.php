@@ -40,7 +40,7 @@ include 'functions.php';
                               <h5 class="card-title">Carro</h5>
                               <p> </p>
   
-                              <a href="#" class=" btn-danger">Realizar Reserva</a>
+                              <a href="reservar.php" class=" btn-danger">Realizar Reserva</a>
                           </div>
                       </div>
                   </div>
@@ -51,7 +51,7 @@ include 'functions.php';
                               <h5 class="card-title">Carro</h5>
                               <p> </p>
   
-                              <a href="#" class=" btn-danger">Realizar Reserva</a>
+                              <a href="reservar.php" class=" btn-danger">Realizar Reserva</a>
                           </div>
                       </div>
                   </div>
@@ -62,7 +62,7 @@ include 'functions.php';
                               <h5 class="card-title">Carro</h5>
                               <p></p>
   
-                              <a href="#" class=" btn-danger">Realizar Reserva</a>
+                              <a href="reservar.php" class=" btn-danger">Realizar Reserva</a>
                           </div>
                       </div>
                   </div>
@@ -73,7 +73,7 @@ include 'functions.php';
                               <h5 class="card-title">Carro</h5>
                               <p></p>
   
-                              <a href="#" class=" btn-danger">Realizar Reserva</a>
+                              <a href="reservar.php" class=" btn-danger">Realizar Reserva</a>
                           </div>
                       </div>
                   </div>
@@ -92,7 +92,7 @@ include 'functions.php';
                         <h5 class="card-title">carro</h5>
                         <p></p>
 
-                        <a href="#" class=" btn-danger">Realizar Reserva</a>
+                        <a href="reservar.php" class=" btn-danger">Realizar Reserva</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@ include 'functions.php';
                         <h5 class="card-title">carro</h5>
                         <p></p>
 
-                        <a href="#" class=" btn-danger">Realizar Reserva</a>
+                        <a href="reservar.php" class=" btn-danger">Realizar Reserva</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@ include 'functions.php';
                         <h5 class="card-title">carro</h5>
                         <p></p>
 
-                        <a href="#" class=" btn-danger">Realizar Reserva</a>
+                        <a href="reservar.php" class=" btn-danger">Realizar Reserva</a>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@ include 'functions.php';
                         <h5 class="card-title">carro</h5>
                         <p></p>
 
-                        <a href="#" class=" btn-danger">Realizar Reserva</a>
+                        <a href="reservar.php" class=" btn-danger">Realizar Reserva</a>
                     </div>
                 </div>
             </div>
