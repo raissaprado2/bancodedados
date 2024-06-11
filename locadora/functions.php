@@ -36,7 +36,7 @@ echo <<<EOT
           </svg></h1>
             <a href="index.php"><i class="fas fa-home"></i>Inicio</a>
     		<a href="reservar.php"><i class="fas fa-shopping-basket"></i>Realizar Reservas</a>
-            <a href="carros.php"><i class="fas fa-search"></i>Catálogo</a>
+            <a href="carros.php"><i class="fas fa-search"></i>Carros</a>
             <a href="encontrar.php"><i class="fas fa-shopping-basket"></i>Encontre sua reserva</a>
            
         </form>

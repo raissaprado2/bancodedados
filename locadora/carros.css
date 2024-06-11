@@ -74,3 +74,31 @@ h1 {
 .main-button:hover {
     background-color: #218838;
 }
+
+.rodapé{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+}
+
+.btn-danger{
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    align-items: center;
+    background-color: #32a367;
+}
+
+.btn-danger {
+    background-color: #32a367;
+    color: white;
+    border: none;
+    align-items: center;
+}
