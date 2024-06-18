@@ -11,7 +11,7 @@ include 'functions.php';
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carros.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <title>Shows</title>
+    <title>Locadora HotWheels</title>
 </head>
 <body>
     
@@ -23,7 +23,10 @@ include 'functions.php';
             <a href="index.php"><i class="fas fa-home"></i>Inicio</a>
     		<a href="reservar.php"><i class="fas fa-shopping-basket"></i>Realizar Reservas</a>
             <a href="carros.php"><i class="fas fa-search"></i>Carros</a>
+            <a href="cadastro_carros.php"><i class="fas fa-search"></i>Cadastrar Carros</a>
             <a href="encontrar.php"><i class="fas fa-shopping-basket"></i>Encontre sua reserva</a>
+            <a href="update.php"><i class="fas fa-shopping-basket"></i>Editar</a>
+            <a href="delete.php"><i class="fas fa-shopping-basket"></i>Excluir</a>
            
         </form>
     	</div>
@@ -136,11 +139,6 @@ include 'functions.php';
 
 
 
-          
-
-        
-
-        
           </div>
           </div>
         </div>

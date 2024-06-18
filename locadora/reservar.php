@@ -2,27 +2,20 @@
 include 'functions.php';
 $pdo = pdo_connect_pgsql();
 $msg = '';
-// Verifica se os dados POST não estão vazios
+
 if (!empty($_POST)) {
-    // Se os dados POST não estiverem vazios, insere um novo registro
-    // Configura as variáveis que serão inserid_contatoas. Devemos verificar se as variáveis POST existem e, se não existirem, podemos atribuir um valor padrão a elas.
-    // Verifica se a variável POST "nome" existe, se não existir, atribui o valor padrão para vazio, basicamente o mesmo para todas as variáveis
-    $modelo = isset($_POST['modelo']) ? $_POST['modelo'] : '';
-    $ano = isset($_POST['ano']) ? $_POST['ano'] : '';
-    $placa = isset($_POST['data_contratacao']) ? $_POST['data_contratacao'] : '';
-    $tipo= isset($_POST['cargo']) ? $_POST['cargo'] : '';
-    $disponibilidade= isset($_POST['cargo']) ? $_POST['cargo'] : '';
-    
-    try{
-      // Insere um novo registro na tabela contacts
-    $stmt = $pdo->prepare('INSERT INTO carro (modelo, ano, placa, tipo, disponibilidade) VALUES (?, ?, ?, ?, ?)');
-    $stmt->execute([$modelo, $ano, $placa, $tipo, $disponibilidade]);
-    // Mensagem de saída
-    $msg = 'Cadastro Realizado com Sucesso!';
-    } catch (Exception $e){
-      $msg = $e;
+    $valor = isset($_POST['valor']) ? $_POST['valor'] : '';
+    $data_locacao = isset($_POST['data_locacao']) ? $_POST['data_locacao'] : '';
+    $data_devolucao = isset($_POST['data_devolucao']) ? $_POST['data_devolucao'] : '';
+    $id_carro = isset($_POST['id_carro']) ? $_POST['id_carro'] : '';
+
+    try {
+        $stmt_reserva = $pdo->prepare('INSERT INTO reservar (valor, data_locacao, data_devolucao, id_cliente, id_carro) VALUES (?, ?, ?, ?, ?)');
+        $stmt_reserva->execute([$valor, $data_locacao, $data_devolucao,  $id_carro]);
+        $msg = 'Reserva Realizada com Sucesso!';
+    } catch (Exception $e) {
+        $msg = 'Erro ao realizar a reserva: ' . $e->getMessage();
     }
-    
 }
 ?>
 
@@ -30,7 +23,7 @@ if (!empty($_POST)) {
 <html>
 <head>
     <link rel="stylesheet" href="reservar.css">
-    <title> Reservas</title>
+    <title>Realizar Reservas</title>
 </head>
 <body>
 <nav class="navtop">
@@ -39,36 +32,34 @@ if (!empty($_POST)) {
             <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
           </svg></h1>
             <a href="index.php"><i class="fas fa-home"></i>Inicio</a>
-    		<a href="reservar.php"><i class="fas fa-shopping-basket"></i>Realizar Reservas</a>
+    		    <a href="reservar.php"><i class="fas fa-shopping-basket"></i>Realizar Reservas</a>
             <a href="carros.php"><i class="fas fa-search"></i>Carros</a>
+            <a href="cadastro_carros.php"><i class="fas fa-search"></i>Cadastrar Carros</a>
             <a href="encontrar.php"><i class="fas fa-shopping-basket"></i>Encontre sua reserva</a>
+            <a href="update.php"><i class="fas fa-shopping-basket"></i>Editar</a>
+            <a href="delete.php"><i class="fas fa-shopping-basket"></i>Excluir</a>
            
         </form>
     	</div>
     </nav><br><br>
     
-    <h1>Cadastro de Funcionários</h1>
-    <form action="reservar.php" method="POST">                                                                                 
-        <label for="modelo">modelo:</label>
-        <input type="text" id="modelo" name="modelo" required><br><br>
 
-        <label for="ano">Ano :</label>
-        <input type="text" id="Ano" name="Ano " required><br><br>
+    <h1>Realizar Reservas</h1>
+    <form action="reservar.php" method="POST">
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" name="valor" required><br>
 
-        <label for="placa">Placa</label>
-        <input type="text" id="placa" name="placa" required><br><br>
+        <label for="data_locacao">Data de Locação:</label>
+        <input type="date" id="data_locacao" name="data_locacao" required><br>
 
-        <label for="tipo">Tipo</label>
-        <input type="text" id="tipo" name="tipo" required><br><br>
+        <label for="data_devolucao">Data de Devolução:</label>
+        <input type="date" id="data_devolucao" name="data_devolucao" required><br>
 
-        <label for="disponibilidade">Disponibilidade</label>
-        <input type="text" id="disponibilidade" name="disponibilidade" required><br><br>
-   
+        <label for="id_carro">ID do Carro:</label>
+        <input type="text" id="id_carro" name="id_carro" required><br><br>
 
-        
-        <input type="submit" value="Cadastrar" >
-    </form><br><br>
-    <p><?=$msg?></p>
+        <button type="submit">Cadastrar</button>
+    </form>
 
 
     <hr class="featurette-divider">
@@ -76,7 +67,12 @@ if (!empty($_POST)) {
             <div class="rodapé">
                 <p>&copy; 2024 - Locadora HotWheels.</p>
               </div>
-              <?=template_footer()?>
+
+    <?php if ($msg) { ?>
+        <div class="message <?= strpos($msg, 'Erro') === false ? 'success' : 'error' ?>">
+            <?= $msg ?>
+        </div>
+    <?php } ?>
+
 </body>
 </html>
-

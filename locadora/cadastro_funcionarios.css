@@ -32,7 +32,7 @@ body {
   }
   
   /* Estilo dos campos de entrada */
-  input[type="text"], input[type="email"] {
+  input[type="text"], input[type="email"], input[type="number"],input[type="date"]{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -41,9 +41,8 @@ body {
     margin-bottom: 20px;
   }
   
-
- /*  botão de envio  */
-  button[type="submit"] {
+  /* Estilo do botão de envio */
+  input[type="submit"]{
     padding: 10px 20px;
     font-size: 16px;
     text-align: center;
@@ -56,12 +55,13 @@ body {
     align-items: center;
 }
 
-button[type="submit"] {
+input[type="submit"]{
     background-color: #32a367;
     color: white;
     border: none;
     align-items: center;
 }
+
 
 .navtop {
   background-color: #1b52a3;
@@ -101,9 +101,10 @@ button[type="submit"] {
 }
 
 
+
 .rodapé{
   display: flex;
   justify-content: center;
   align-items: center;  
-  
+ 
 }
