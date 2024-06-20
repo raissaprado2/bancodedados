@@ -9,9 +9,9 @@ if (!empty($_POST)) {
     // Verifica se a variável POST "nome" existe, se não existir, atribui o valor padrão para vazio, basicamente o mesmo para todas as variáveis
     $modelo = isset($_POST['modelo']) ? $_POST['modelo'] : '';
     $ano = isset($_POST['ano']) ? $_POST['ano'] : '';
-    $placa = isset($_POST['data_contratacao']) ? $_POST['data_contratacao'] : '';
-    $tipo= isset($_POST['cargo']) ? $_POST['cargo'] : '';
-    $disponibilidade= isset($_POST['cargo']) ? $_POST['cargo'] : '';
+    $placa = isset($_POST['placa']) ? $_POST['placa'] : '';
+    $tipo= isset($_POST['tipo']) ? $_POST['tipo'] : '';
+    $disponibilidade= isset($_POST['disponibilidade']) ? $_POST['disponibilidade'] : '';
     
     try{
       // Insere um novo registro na tabela contacts
@@ -42,9 +42,9 @@ if (!empty($_POST)) {
     		    <a href="reservar.php"><i class="fas fa-shopping-basket"></i>Realizar Reservas</a>
             <a href="carros.php"><i class="fas fa-search"></i>Carros</a>
             <a href="cadastro_carros.php"><i class="fas fa-search"></i>Cadastrar Carros</a>
-            <a href="encontrar.php"><i class="fas fa-shopping-basket"></i>Encontre sua reserva</a>
-            <a href="update.php"><i class="fas fa-shopping-basket"></i>Editar</a>
-            <a href="delete.php"><i class="fas fa-shopping-basket"></i>Excluir</a>
+            <a href="listar_cliente.php"><i class="fas fa-shopping-basket"></i>Listar Clientes</a>
+            <a href="listar_carros.php"><i class="fas fa-shopping-basket"></i>Listar Carros</a>
+            <a href="listar_funcionario.php"><i class="fas fa-shopping-basket"></i>Listar Funcionários</a>
            
         </form>
     	</div>
@@ -56,7 +56,7 @@ if (!empty($_POST)) {
         <input type="text" id="modelo" name="modelo" required><br><br>
 
         <label for="ano">Ano :</label>
-        <input type="text" id="Ano" name="Ano " required><br><br>
+        <input type="text" id="ano" name="ano" required><br><br>
 
         <label for="placa">Placa</label>
         <input type="text" id="placa" name="placa" required><br><br>
